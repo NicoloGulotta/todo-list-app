@@ -37,8 +37,8 @@ function TodoList() {
         }));
     }
     return (
-        <div className="todo-list">
-            <h1>TodoList<h5 style={{ color: "green", display: "inline" }}>٧</h5></h1>
+        <div className="todo-list" style={{ backgroundColor: "lightgray", padding: "20px", borderRadius: "10px", boxShadow: "0px 0px 10px rgba(0,0,0,0.2)", width: "500px", margin: "40px auto" }}>
+            <h1 style={{ color: "black", fontSize: "36px", fontWeight: "bold", marginBottom: "20px" }}>TodoList</h1>
             {tasks.map(task => (
                 <TodoItem
                     key={task.id}
@@ -50,8 +50,9 @@ function TodoList() {
             <input
                 value={text}
                 onChange={e => setText(e.target.value)}
+                style={{ padding: "10px", fontSize: "18px", borderRadius: "5px", width: "80%", height: "40px", border: "none", outline: "none", boxShadow: "0px 0px 10px rgba(0,0,0,0.2)", marginBottom: "20px" }}
             />
-            <button onClick={() => addTask(text)}>Add</button>
+            <button onClick={() => addTask(text)} style={{ padding: "10px", fontSize: "18px", borderRadius: "5px", backgroundColor: "black", color: "white", width: "50%", height: "40px", border: "none", outline: "none", cursor: "pointer" }}>Aggiungi</button>
         </div>
     );
 }
